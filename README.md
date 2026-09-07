@@ -75,3 +75,7 @@ This project is based on [github-readme-stats](https://github.com/anuraghazra/gi
 ## Contributing
 
 Contributions are welcome!
+
+---
+
+*StuxAPIs is part of the <img src="https://media.stux.group/global/icon.png" height="14" alt="Stux.Group" valign="middle"> [Stux.Group](https://github.com/StuxGroup) Brand of Companies.*
