@@ -12,6 +12,11 @@ Started at v3.0.0 rather than v1.0.0 — this fork's git history carries
 upstream's own release tags up through v2.1.5, so anything in the v1.x/v2.x
 range would collide with an existing tag.
 
+## v3.0.4
+
+### Fixed
+- `README.md`'s Stux.Group brand icon URL had a leftover duplicated `/global/` path segment (`global.media.stux.group/global/icon.png`) — corrected to `https://global.media.stux.group/icon.png`
+
 ## v3.0.3
 
 ### Changed
