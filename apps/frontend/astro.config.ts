@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, passthroughImageService } from "astro/config";
 import starlightLinksValidator from "starlight-links-validator";
 
+import { faviconTags } from "./src/headTags.js";
 import { rehypeCardImages } from "./src/plugins/rehypeCardImages.js";
 
 const base = "/frontend";
@@ -44,17 +45,7 @@ export default defineConfig({
       logo: { src: "./src/assets/appLogo64.png", alt: "" },
       // Starlight defaults to a favicon.svg this project does not ship.
       favicon: "/favicon.ico",
-      head: [
-        {
-          tag: "link",
-          attrs: { rel: "apple-touch-icon", href: `${base}/logo192.png` },
-        },
-        {
-          tag: "link",
-          attrs: { rel: "manifest", href: `${base}/manifest.json` },
-        },
-        { tag: "meta", attrs: { name: "theme-color", content: "#000000" } },
-      ],
+      head: faviconTags(base),
       social: [
         {
           icon: "github",
@@ -70,7 +61,10 @@ export default defineConfig({
         }),
       ],
       customCss: ["./src/styles/starlight-theme.css"],
-      components: { SiteTitle: "./src/components/SiteTitle.astro" },
+      components: {
+        Head: "./src/components/Head.astro",
+        SiteTitle: "./src/components/SiteTitle.astro",
+      },
       sidebar: [
         { label: "Overview", slug: "docs" },
         {

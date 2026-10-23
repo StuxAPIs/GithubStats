@@ -1,0 +1,25 @@
+---
+// Starlight's own head, plus the Discord component embed (left out of 404 pages).
+import Default from "@astrojs/starlight/components/Head.astro";
+
+import { buildEmbed, discordTag, pageKind, SITE_TAGLINE } from "../discordEmbed.js";
+
+const route = Astro.locals.starlightRoute;
+const is404 = route.id === "404";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const origin = (Astro.site ?? new URL(Astro.url.origin)).origin;
+const isWizard = Astro.url.pathname.replace(/\/$/, "") === base;
+const embed = is404
+  ? null
+  : discordTag(
+      buildEmbed(origin, base, {
+        kind: pageKind(route.id, isWizard),
+        title: route.entry.data.title,
+        description: route.entry.data.description ?? SITE_TAGLINE,
+        url: new URL(Astro.url.pathname, origin).href,
+      }),
+    );
+---
+
+<Default><slot /></Default>
+{embed && <Fragment set:html={embed} />}
