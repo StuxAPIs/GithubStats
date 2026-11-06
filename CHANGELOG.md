@@ -5,12 +5,18 @@ documented here, tracking this fork independently of upstream's own release
 history. For upstream history, see
 [stats-organization/github-stats-extended](https://github.com/stats-organization/github-stats-extended).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Each release's sections follow a fixed order: Added, Changed, Fixed, Removed, Security, Deprecated. This project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Started at v3.0.0 rather than v1.0.0 — this fork's git history carries
 upstream's own release tags up through v2.1.5, so anything in the v1.x/v2.x
 range would collide with an existing tag.
+
+## v26.11.06
+
+### Changed
+
+- The README's header links StuxAPIs' own instance (githubstats.stuxapis.net) instead of a bare "Hosted by stuxapis.net", with a note that its examples use upstream's public instance and how to use StuxAPIs' instead
+- The changelog intro gives the fixed section order (Added, Changed, Fixed, Removed, Security, Deprecated) instead of citing Keep a Changelog, whose order differs
 
 ## v26.10.23
 
