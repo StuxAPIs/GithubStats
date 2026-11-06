@@ -11,6 +11,12 @@ Started at v3.0.0 rather than v1.0.0 — this fork's git history carries
 upstream's own release tags up through v2.1.5, so anything in the v1.x/v2.x
 range would collide with an existing tag.
 
+## v26.11.06-3
+
+### Fixed
+
+- CI's code checks pass: `DISCORD_EMBED_MAX_BYTES`, `DISCORD_COLOUR` and `SITE_NAME` (`apps/frontend/src/discordEmbed.ts`) and `THEME_COLOUR` (`apps/frontend/src/headTags.ts`) are no longer exported, since only their own files use them, and knip rejects unused exports
+
 ## v26.11.06-2
 
 ### Fixed

@@ -4,9 +4,9 @@
  * https://docs.discord.com/developers/link-previews/component-embeds
  */
 
-export const DISCORD_EMBED_MAX_BYTES = 3000;
-export const DISCORD_COLOUR = "#ff4444";
-export const SITE_NAME = "GitHub Stats Extended";
+const DISCORD_EMBED_MAX_BYTES = 3000;
+const DISCORD_COLOUR = "#ff4444";
+const SITE_NAME = "GitHub Stats Extended";
 export const SITE_TAGLINE =
   "Dynamically generate GitHub stats for your READMEs.";
 

@@ -7,7 +7,7 @@ export interface HeadTag {
   attrs: Record<string, string>;
 }
 
-export const THEME_COLOUR = "#ff4444";
+const THEME_COLOUR = "#ff4444";
 
 /**
  * @param base - The site's base path, e.g. `/frontend`, without a trailing slash.
