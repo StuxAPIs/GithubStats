@@ -1,12 +1,18 @@
 <div align="center">
   <img src="docs/appIcon.svg" width="100px" alt="GitHub Stats Extended Logo" />
   <h1>GitHub Stats Extended</h1>
-  <h3>Hosted by stuxapis.net</h3>
+  <h3>Hosted by StuxAPIs at <a href="https://githubstats.stuxapis.net">githubstats.stuxapis.net</a></h3>
   <p>Dynamically generate GitHub stats for your READMEs.</p>
 <a href="https://github-stats-extended.vercel.app/api?username=anuraghazra"><img src="https://github-stats-extended.vercel.app/api?username=anuraghazra"></a>
 </div>
 
 GitHub-Stats-Extended is the [extended, actively maintained successor](docs/fork.md) of [github-readme-stats](https://github.com/anuraghazra/github-readme-stats). It generates [various stats cards](#card-types) about your GitHub contributions, your top languages and more. You can [customize](#documentation) the cards via multiple parameters.
+
+> [!NOTE]
+> StuxAPIs hosts its own instance at [githubstats.stuxapis.net](https://githubstats.stuxapis.net), with the card
+> wizard at [githubstats.stuxapis.net/frontend](https://githubstats.stuxapis.net/frontend). The examples in this
+> README and its docs use upstream's public instance (`github-stats-extended.vercel.app`): swap in
+> `githubstats.stuxapis.net` to use StuxAPIs' instead.
 
 ## Table of Contents
 
