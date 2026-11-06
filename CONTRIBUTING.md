@@ -2,6 +2,12 @@ See [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) for this fork's upstream 
 
 For changes specific to how StuxAPIs hosts this fork (branding, release files, deployment), open a pull request against this repo directly.
 
+## Branches
+
+- Work on `test`, or on a branch off it. Never push to `master`
+- Changes reach `master` only through a pull request from `test` into `master`, which needs CI to pass and is reviewed and merged by Leo
+- Release commits and tags are made on `test` (`git push origin test --tags`) and take effect when the pull request is merged.
+
 ## Versioning
 
 This project uses [Date Versioning](https://datevers.ing). To release:
