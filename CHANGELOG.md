@@ -11,6 +11,26 @@ Started at v3.0.0 rather than v1.0.0 — this fork's git history carries
 upstream's own release tags up through v2.1.5, so anything in the v1.x/v2.x
 range would collide with an existing tag.
 
+## v26.11.06-3
+
+### Fixed
+
+- CI's code checks pass: `DISCORD_EMBED_MAX_BYTES`, `DISCORD_COLOUR` and `SITE_NAME` (`apps/frontend/src/discordEmbed.ts`) and `THEME_COLOUR` (`apps/frontend/src/headTags.ts`) are no longer exported, since only their own files use them, and knip rejects unused exports
+
+## v26.11.06-2
+
+### Fixed
+
+- `CHANGELOG.md` and `README.md` are formatted with Prettier again, so CI's code checks pass: the v26.11.06-1 additions, and older changelog entries that had no blank line after their headings
+
+## v26.11.06-1
+
+### Changed
+
+- CI (`.github/workflows/ci.yml`) also runs on pushes to `test`
+- `commit.sh` and `commit.bat` end by saying to push `test` and open a pull request into `master`
+- README (Versioning) and CONTRIBUTING (a new Branches section) describe the `test` branch flow: work and releases happen on `test`, and reach `master` only through a reviewed pull request that needs CI to pass
+
 ## v26.11.06
 
 ### Changed
@@ -42,35 +62,42 @@ range would collide with an existing tag.
 ## v3.0.5
 
 ### Security
+
 - The WakaTime card's `api_domain` query parameter was used as-is to build the server-side request URL, letting anyone make the backend fetch arbitrary hosts (SSRF). It's now restricted to an allowlist — `wakatime.com`, `wakapi.dev`, `hackatime.hackclub.com` — and anything else (other hosts, IPs, `localhost`, embedded credentials, custom ports) is rejected with a "Supported api_domain values" error card; the WakaTime card docs list the allowed values
 - The WakaTime `username` is now URL-encoded in the request path, so values like `../../admin?x=` can't rewrite the API path or query
 
 ## v3.0.4
 
 ### Fixed
+
 - `README.md`'s Stux.Group brand icon URL had a leftover duplicated `/global/` path segment (`global.media.stux.group/global/icon.png`) — corrected to `https://global.media.stux.group/icon.png`
 
 ## v3.0.3
 
 ### Changed
+
 - `README.md`'s footer "Built & Maintained by StuxAPIs" icon now uses StuxAPIs' own logo (`https://global.media.stuxapis.net/icon.png`) instead of the GitHub org avatar (`github.com/StuxAPIs.png`), now that StuxAPIs has real branding of its own
 
 ## v3.0.2
 
 ### Changed
+
 - `README.md`'s footer brand-attribution block updated to the new two-line format (Built & Maintained by StuxAPIs, Hosted by Stuxedo / StuxAPIs is a part of the Stux.Group brand of businesses), replacing the older single-line disclaimer
 
 ## v3.0.1
 
 ### Changed
+
 - `README.md`'s "StuxAPIs is part of the Stux.Group Brand of Companies" line now includes the Stux.Group icon inline
 - This changelog's preamble now uses the standard Keep a Changelog wording
 
 ## v3.0.0
 
 ### Added
+
 - `VERSION.md`, `CHANGELOG.md`, `commit.sh`/`commit.bat` — brought the fork onto the standard StuxAPIs release flow (bump `VERSION.md`, update this changelog, run `commit.sh`/`commit.bat` to commit and tag `vX.Y.Z`)
 
 ### Changed
+
 - Switched this fork's upstream from the now-deprecated [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) to its actively maintained TypeScript successor, [stats-organization/github-stats-extended](https://github.com/stats-organization/github-stats-extended)
 - Re-added the "Hosted by stuxapis.net" branding line to `README.md`'s header, lost when the codebase was replaced by the new upstream
