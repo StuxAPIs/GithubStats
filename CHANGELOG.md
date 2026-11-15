@@ -11,6 +11,12 @@ Started at v3.0.0 rather than v1.0.0 — this fork's git history carries
 upstream's own release tags up through v2.1.5, so anything in the v1.x/v2.x
 range would collide with an existing tag.
 
+## v26.11.15
+
+### Changed
+
+- Releases now go live in two steps, each through a pull request: `test` into `staging`, then `staging` into `master`. `staging` is a new branch made from `master`, and nothing is pushed to `staging` or `master` directly. `commit.sh` / `commit.bat` refuse to run on `staging` or `master`, and print the push command and both `gh pr create` commands. CI also runs on `staging`. CONTRIBUTING's "Branches and going live" section and the README describe it
+
 ## v26.11.06-3
 
 ### Fixed
