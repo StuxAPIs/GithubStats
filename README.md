@@ -91,4 +91,4 @@ StuxAPIs is a part of the <picture><source media="(prefers-color-scheme: dark)" 
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
-Releases are committed and tagged on the `test` branch and reach `master` through a pull request from `test`, which needs CI to pass and is reviewed and merged by Leo; see [Branches](CONTRIBUTING.md#branches).
+Releases are committed and tagged on the `test` branch, then go live through two pull requests: `test` into `staging`, then `staging` into `master`. Each needs CI to pass and is reviewed and merged by Leo; see [Branches and going live](CONTRIBUTING.md#branches-and-going-live).

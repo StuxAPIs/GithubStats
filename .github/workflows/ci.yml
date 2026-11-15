@@ -5,10 +5,12 @@ on:
   push:
     branches:
       - master
+      - staging
       - test
   pull_request:
     branches:
       - master
+      - staging
 
 concurrency:
   group: "${{ github.workflow }}-${{ github.head_ref }}"
